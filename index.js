@@ -32,23 +32,53 @@ window.addEventListener('DOMContentLoaded', () => {
 let cellArr = Array.from(document.getElementsByTagName('td'))
 console.log(cellArr)
 
+let hatVisible = false
+
+let table = document.querySelectorAll('.whack-bc')
 function chooseRandCell() {
-  let randomCell = getRandNum(cellArr)
+  let randomIndex = getRandNum(cellArr)
+  let randomCell = cellArr[randomIndex]
+
   console.log(randomCell)
+
   let img = document.createElement('img')
-  img.src = ''
+  img.src = 'images/whack-hat.png'
   img.alt = 'Hat'
-  img.width = 80
-  img.height = 80
+  img.width = 230
+  img.height = 135
+
   img.onclick = function (event) {
     event.stopPropagation()
     img.remove()
+    let selectedHat = document.getElementById('selected-hat')
+    selectedHat.removeAttribute('id')
+    hatVisible = false
   }
-  cellArr.onclick = () => {
-    randomCell.appendChild(img)
-  }
+  // table.forEach((el) => {
+  //   el.classList.remove('whack-bc')
+  // })
+
+  randomCell.appendChild(img)
+  randomCell.id = 'selected-hat'
+
+  // document.getElementById('selected-hat').classList.remove('whack-bc')
+  // table.forEach((el) => {
+  //   el.classList.remove('whack-bc')
+  // })
+  hatVisible = true
 }
-chooseRandCell()
+
+function findHat() {
+  cellArr.forEach((cell) => {
+    cell.onclick = function () {
+      if (!hatVisible) {
+        chooseRandCell()
+      }
+    }
+  })
+}
+
+findHat()
 
 //util function
 function getRandNum(arr) {

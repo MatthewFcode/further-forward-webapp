@@ -146,7 +146,6 @@ nav {
 /* whack a hat game */
 
 .hat-whack-table td {
-  background-color: #696969;
   height: 10rem;
   width: 15rem;
   margin-right: center;
@@ -154,7 +153,18 @@ nav {
   margin: 0 auto;
 }
 
+.hat-whack-table td:hover {
+  cursor: pointer;
+}
+
 .whack-div {
   display: flex;
   justify-content: center;
+}
+.whack-bc {
+  background-color: #696969;
+}
+
+#selected-hat {
+  background-color: #909090;
 }
