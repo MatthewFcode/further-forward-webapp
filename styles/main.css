@@ -97,10 +97,9 @@ nav {
 .f-image {
   height: 35rem;
   width: 35rem;
-  opacity: 0.9;
 }
 
-.main-images-container {
+.under-nav {
   position: relative;
   padding-top: 7rem;
 }
@@ -114,12 +113,48 @@ nav {
 }
 
 .rotating-img {
-  border-top: 0.2rem solid rgba(245, 245, 245, 0.861);
-  border-bottom: 0.2rem solid rgba(245, 245, 245, 0.861);
-  border-right: 0.2rem solid rgba(245, 245, 245, 0.861);
-  border-left: 0.2rem solid rgba(245, 245, 245, 0.861);
+  border: 0.07rem solid rgba(245, 245, 245, 0.861);
+
   border-radius: 0.2rem;
   height: 25rem;
   width: 40rem;
   object-fit: cover;
+}
+
+/* fade in transition for the dom content loading on home page  */
+
+.fade-in-on-load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-on-load.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-on-load-again {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in-on-load-again.visbile {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* whack a hat game */
+
+.hat-whack-table td {
+  background-color: #696969;
+  height: 10rem;
+  width: 15rem;
+  margin-right: center;
+  margin-left: center;
+  margin: 0 auto;
+}
+
+.whack-div {
+  display: flex;
+  justify-content: center;
 }
