@@ -204,8 +204,9 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-right: 8rem;
+  margin-right: 6.8rem;
   margin-left: 2rem;
+  padding-right: 0rem;
 }
 
 .score {
@@ -213,7 +214,45 @@ nav {
   background-color: #b5b1b1;
   border-radius: 0.05rem;
   border: 0.05rem solid grey;
+
   font-family: 'Chivo Mono', monospace;
 
-  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  padding: 0.6rem 1.2rem 0.6rem 0.6rem;
+}
+
+/* about page grid */
+.center-about-grid {
+  display: flex;
+  justify-content: center;
+  padding-top: 3.7rem;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+}
+
+.about-divider-1 {
+  background-color: whitesmoke;
+  height: 25rem;
+  width: 0.2rem;
+  justify-self: center;
+}
+
+.italy-img {
+  height: 22rem;
+  width: 22rem;
+  border-radius: 50%;
+}
+
+.ffhat-img {
+  height: 23rem;
+  width: 32rem;
+}
+
+.about-p {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 1.3rem;
+  color: whitesmoke;
 }

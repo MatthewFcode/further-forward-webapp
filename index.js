@@ -59,9 +59,9 @@ function chooseRandCell() {
     img.remove()
     let selectedHat = document.getElementById('selected-hat')
     selectedHat.removeAttribute('id')
+    hitTheHat = true
     countScore()
     hatVisible = false
-    hitTheHat = true
   }
   // table.forEach((el) => {
   //   el.classList.remove('whack-bc')
@@ -84,6 +84,7 @@ function findHat() {
         chooseRandCell()
       } else if (!gameStarted) {
         startGame()
+        chooseRandCell()
       }
     }
   })
