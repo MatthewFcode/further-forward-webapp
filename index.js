@@ -10,6 +10,7 @@ const images = [
 ]
 
 const img = document.getElementById('rotate')
+
 function imgSwap() {
   setTimeout(() => {
     currentIndex = (currentIndex + 1) % images.length // loop back to 0
