@@ -115,7 +115,7 @@ nav {
 .rotating-img {
   border: 0.07rem solid rgba(245, 245, 245, 0.861);
 
-  border-radius: 0.2rem;
+  border-radius: 0.05rem;
   height: 25rem;
   width: 40rem;
   object-fit: cover;
@@ -206,7 +206,5 @@ nav {
   border: 0.05rem solid grey;
   font-family: 'Chivo Mono', monospace;
 
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-left: 0.6rem;
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
 }

@@ -34,9 +34,15 @@ let cellArr = Array.from(document.getElementsByTagName('td'))
 console.log(cellArr)
 
 let hatVisible = false
+let hitTheHat = false
+let gameStarted = false
+let gameTimer = null
 
 let table = document.querySelectorAll('.whack-bc')
+console.log(table)
+
 function chooseRandCell() {
+  if (!gameStarted) return
   let randomIndex = getRandNum(cellArr)
   let randomCell = cellArr[randomIndex]
 
@@ -53,7 +59,9 @@ function chooseRandCell() {
     img.remove()
     let selectedHat = document.getElementById('selected-hat')
     selectedHat.removeAttribute('id')
+    countScore()
     hatVisible = false
+    hitTheHat = true
   }
   // table.forEach((el) => {
   //   el.classList.remove('whack-bc')
@@ -72,8 +80,10 @@ function chooseRandCell() {
 function findHat() {
   cellArr.forEach((cell) => {
     cell.onclick = function () {
-      if (!hatVisible) {
+      if (!hatVisible && gameStarted) {
         chooseRandCell()
+      } else if (!gameStarted) {
+        startGame()
       }
     }
   })
@@ -83,6 +93,66 @@ findHat()
 
 //WHACK THE COUNTER, START GAME AND RESTART GAME
 
+let currentScore = 0
+
+function countScore() {
+  let score = document.getElementById('your-score')
+  if (hitTheHat === true) {
+    currentScore++
+    score.innerHTML = `YOUR SCORE: ${currentScore}`
+    hitTheHat = false
+    //document.getElementById('your-score').innerHTML = currentScore
+  }
+}
+
+function startGame() {
+  gameStarted = true
+  currentScore = 0
+  document.getElementById(
+    'your-score'
+  ).innerHTML = `YOUR SCORE: ${currentScore}`
+
+  gameTimer = setTimeout(() => {
+    gameStarted = false
+    alert(`Game Over! Your score: ${currentScore}`)
+    const selected = document.getElementById('selected-hat')
+    if (selected) {
+      selected.innerHTML = ''
+      selected.removeAttribute('id')
+    }
+    hatVisible = false
+  }, 60000)
+}
+
+function restartGame() {
+  let restartBtn = document.getElementById('restart-button')
+  restartBtn.onclick = function () {
+    if (gameTimer) {
+      clearTimeout(gameTimer)
+      gameTimer = null
+    }
+
+    currentScore = 0
+    document.getElementById(
+      'your-score'
+    ).innerHTML = `YOUR SCORE: ${currentScore}`
+
+    gameStarted = false
+    hitTheHat = false
+    hatVisible = false
+
+    const selected = document.getElementById('selected-hat')
+    if (selected) {
+      selected.innerHTML = ''
+      selected.removeAttribute('id')
+    }
+    console.log(
+      'restart button has been clicked, waiting for user to click a cell to start the game again!'
+    )
+  }
+}
+
+restartGame()
 //util functions
 function getRandNum(arr) {
   let randNum = Math.floor(Math.random() * arr.length)
