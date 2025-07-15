@@ -86,6 +86,7 @@ nav {
   position: absolute;
   left: 5rem;
   top: 0;
+  z-index: 1;
 }
 
 .right-overlap {
@@ -109,7 +110,6 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: -3rem;
-  z-index: 1;
 }
 
 .rotating-img {
@@ -119,6 +119,15 @@ nav {
   height: 25rem;
   width: 40rem;
   object-fit: cover;
+  transition: transform 0.1s ease;
+}
+
+.rotating-img:hover {
+  cursor: pointer;
+}
+
+.rotating-img:active {
+  transform: scale(0.99);
 }
 
 /* fade in transition for the dom content loading on home page  */
