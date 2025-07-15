@@ -159,7 +159,7 @@ nav {
 
 .whack-div {
   display: flex;
-  justify-content: center;
+  align-items: start;
   padding-top: 5rem;
 }
 .whack-bc {
@@ -168,4 +168,45 @@ nav {
 
 #selected-hat {
   background-color: #909090;
+}
+
+/* whack a hat button and counter  */
+.start {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 1.3rem;
+  background-color: #b5b1b1;
+  border: 0.05rem solid grey;
+  border-radius: 0.05rem;
+  display: block;
+  height: 2.8rem;
+  transition: transform 0.1s ease;
+}
+
+.start:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.start:active {
+  transform: scale(0.95);
+}
+
+.start-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 8rem;
+  margin-left: 2rem;
+}
+
+.score {
+  font-size: 1.3rem;
+  background-color: #b5b1b1;
+  border-radius: 0.05rem;
+  border: 0.05rem solid grey;
+  font-family: 'Chivo Mono', monospace;
+
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 0.6rem;
 }

@@ -80,7 +80,9 @@ function findHat() {
 
 findHat()
 
-//util function
+//WHACK THE COUNTER, START GAME AND RESTART GAME
+
+//util functions
 function getRandNum(arr) {
   let randNum = Math.floor(Math.random() * arr.length)
   return randNum
