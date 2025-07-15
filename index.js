@@ -44,8 +44,8 @@ function chooseRandCell() {
   let img = document.createElement('img')
   img.src = 'images/whack-hat.png'
   img.alt = 'Hat'
-  img.width = 230
-  img.height = 135
+  img.width = 200
+  img.height = 120
 
   img.onclick = function (event) {
     event.stopPropagation()
