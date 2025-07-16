@@ -244,15 +244,82 @@ nav {
   height: 22rem;
   width: 22rem;
   border-radius: 50%;
+  justify-self: center;
+}
+.italy-img-div {
+  justify-self: center;
 }
 
 .ffhat-img {
   height: 23rem;
   width: 32rem;
+  justify-self: center;
 }
 
+.ffhat-div {
+  justify-self: center;
+}
 .about-p {
   font-family: 'Chivo Mono', monospace;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: whitesmoke;
+  justify-self: center;
+  width: 27rem;
+  margin-top: 5rem;
+  padding-bottom: 4rem;
+  border-bottom: 0.2rem solid whitesmoke;
+}
+.about-p-2 {
+  font-family: 'Chivo Mono', monospace;
+  font-size: 1rem;
+  color: whitesmoke;
+  justify-self: center;
+  width: 60rem;
+  margin-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-left: 0.2rem solid whitesmoke;
+  align-items: center;
+  position: relative;
+  bottom: 2rem;
+}
+
+.about-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 5rem;
+  align-items: center;
+}
+
+.monfils-img {
+  height: 22rem;
+  width: 22rem;
+  border-radius: 50%;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+  right: 3rem;
+}
+
+.monfils-div {
+  justify-self: center;
+  align-items: center;
+}
+
+.factory-hat {
+  height: 22rem;
+  width: 22rem;
+  border-radius: 50%;
+  justify-self: center;
+  position: relative;
+  right: 3rem;
+}
+
+.factoryhat-div {
+  justify-self: center;
+}
+
+.aboutp-div {
+  align-items: center;
 }
