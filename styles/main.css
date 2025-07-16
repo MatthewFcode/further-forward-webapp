@@ -252,8 +252,8 @@ nav {
 }
 
 .italy-img {
-  height: 22rem;
-  width: 22rem;
+  height: 24rem;
+  width: 23rem;
   border-radius: 50%;
   justify-self: center;
 }
@@ -262,9 +262,28 @@ nav {
 }
 
 .ffhat-img {
-  height: 23rem;
+  height: 25rem;
   width: 32rem;
   justify-self: center;
+  opacity: 0.9;
+  transition: transform 0.1s ease;
+}
+.ffhat-img.here {
+  height: 25rem;
+  width: 32rem;
+  justify-self: center;
+  opacity: 0.9;
+  transition: transform 0.1s ease;
+}
+.ffhat-img:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.ffhat-img:active {
+  cursor: pointer;
+  transform: scale(0.98);
 }
 
 #ffhat-div {

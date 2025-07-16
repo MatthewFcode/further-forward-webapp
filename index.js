@@ -6,7 +6,7 @@
 let currentIndex = 0
 const images = [
   'images/istockphoto-1409329028-612x612.jpg',
-  'images/IMG_1330.jpeg',
+  'images/elementor-placeholder-image.webp',
 ]
 
 const img = document.getElementById('rotate')
