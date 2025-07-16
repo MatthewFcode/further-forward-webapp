@@ -21,11 +21,23 @@ function imgSwap() {
 
 imgSwap()
 // animating the page when entered
+//animating for the play and the home page and the two first images on the about page
 window.addEventListener('DOMContentLoaded', () => {
-  let fadeClass = document.querySelectorAll('.fade-in-on-load')
-  fadeClass.forEach((el) => {
-    el.classList.add('visible')
-  })
+  setTimeout(() => {
+    let fadeClass = document.querySelectorAll('.fade-in-on-load')
+    fadeClass.forEach((el) => {
+      el.classList.add('visible')
+    })
+  }, 100)
+})
+//animating the page for the two about first paragraphs
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    let fadeClass = document.querySelectorAll('.about-p-delay')
+    fadeClass.forEach((el) => {
+      el.classList.add('visible')
+    })
+  }, 500)
 })
 
 //WHACKING THE HAT

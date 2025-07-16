@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <nav>
@@ -32,37 +33,39 @@
     </nav>
     <div class="under-nav">
       <div class="center-about-grid">
-        <div class="about-grid">
-          <div class="italy-img-div">
+        <div data-aos="fade-left" class="about-grid">
+          <div id="italy-img-div">
             <img
               src="images/matthew-italy.jpg"
               alt="FF fouunder"
               class="italy-img"
             />
           </div>
-          <div><div class="about-divider-1"></div></div>
-          <div class="ffhat-div">
+          <div>
+            <div class="about-divider-1"></div>
+          </div>
+          <div id="ffhat-div">
             <img src="images/whack-hat.png" class="ffhat-img" />
           </div>
-          <div class="aboutp-div">
+          <div data-aos="fade-left" data-aos-duration="900" id="aboutp-div">
             <p class="about-p">
               Me- Hi I am Matthew, founder of Further Forward. I started this
               company not just to produce a quality product but to inspire hard
-              work and drive in everyone that finds us.
+              work and drive in everyone that comes across our brand.
             </p>
           </div>
           <div></div>
-          <div class="aboutp-div">
+          <div data-aos="fade-left" data-aos-duration="1100" id="aboutp-div">
             <p class="about-p">
               Product- Our product guarantees an industry leading usability for
-              sports and performance. Lights as a feather, sweat wicking and
-              will never ever get blown off of your head.
+              sports and performance. Our hat is as light as a feather, sweat
+              wicking and will never ever get blown off of your head.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="about-grid-2">
+      <div data-aos="fade-right" class="about-grid-2">
         <div class="factoryhat-div">
           <img
             src="https://i.ytimg.com/vi/rhAVbz2w8GY/maxresdefault.jpg"
@@ -105,5 +108,9 @@
         </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="animate.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

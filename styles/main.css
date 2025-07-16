@@ -14,9 +14,9 @@ body {
 
 /* nav bar */
 nav {
-  height: 7rem;
+  height: 8rem;
   background-color: #121212;
-  border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
+  border-bottom: 0.3rem solid rgba(13, 13, 13);
   width: 100vw;
   position: fixed;
   z-index: 2;
@@ -142,7 +142,16 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
-.fade-in-on-load-again {
+/* .about-p-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.about-p-delay.visible {
+  opacity: 1;
+  transform: translateY(0);
+} */
+/* .fade-in-on-load-again {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -150,7 +159,7 @@ nav {
 .fade-in-on-load-again.visbile {
   opacity: 1;
   transform: translateY(0);
-}
+} */
 
 /* whack a hat game */
 
@@ -225,6 +234,7 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 3.7rem;
+  padding-bottom: 3rem; /*can be removed if more is add to the first two about paragraphs */
 }
 .about-grid {
   display: grid;
@@ -235,8 +245,9 @@ nav {
 
 .about-divider-1 {
   background-color: whitesmoke;
+  color: grey;
   height: 25rem;
-  width: 0.2rem;
+  width: 0.3rem;
   justify-self: center;
 }
 
@@ -246,7 +257,7 @@ nav {
   border-radius: 50%;
   justify-self: center;
 }
-.italy-img-div {
+#italy-img-div {
   justify-self: center;
 }
 
@@ -256,7 +267,7 @@ nav {
   justify-self: center;
 }
 
-.ffhat-div {
+#ffhat-div {
   justify-self: center;
 }
 .about-p {
@@ -320,6 +331,6 @@ nav {
   justify-self: center;
 }
 
-.aboutp-div {
+#aboutp-div {
   align-items: center;
 }
