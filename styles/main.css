@@ -20,6 +20,8 @@ nav {
   width: 100vw;
   position: fixed;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 
 .nav-container {
@@ -33,6 +35,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 4rem;
   margin-right: 4rem;
   color: whitesmoke;
@@ -48,14 +51,19 @@ nav {
   max-height: 6.5rem;
   width: 5rem;
   margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-color {
   color: whitesmoke;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a {
   position: relative;
+
   color: whitesmoke;
   text-decoration: none;
   padding-bottom: 4px;
@@ -162,7 +170,10 @@ nav {
 } */
 
 /* whack a hat game */
-
+.display-whack-center {
+  display: flex;
+  justify-content: center;
+}
 .hat-whack-table td {
   height: 8rem;
   width: 13rem;
@@ -352,4 +363,217 @@ nav {
 
 #aboutp-div {
   align-items: center;
+}
+
+/* media queries for responsivity on the home page and the nav bar*/
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
+
+  .f-image {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .rotating-img {
+    width: 30rem;
+    height: 20rem;
+  }
+
+  .image-stack {
+    height: 60rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 0 1rem;
+  }
+
+  .nav-image {
+    margin-bottom: 1rem;
+  }
+
+  .image-stack {
+    padding-top: 10rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .f-image {
+    position: static;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .main-rotating {
+    margin-top: 0;
+  }
+
+  .rotating-img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-links {
+    font-size: 1.2rem;
+  }
+
+  .rotating-img {
+    width: 100%;
+  }
+
+  .f-image {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+/* responsivity for the about page */
+@media screen and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+
+  .about-divider-1 {
+    height: 0.2rem;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .ffhat-img,
+  .italy-img {
+    width: 90%;
+    max-width: 25rem;
+    height: auto;
+  }
+
+  .about-p {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .about-grid-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 1rem;
+  }
+
+  .about-p-2 {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-left: none;
+    border-top: 0.2rem solid whitesmoke;
+    text-align: center;
+  }
+
+  .monfils-img,
+  .factory-hat {
+    width: 90%;
+    max-width: 20rem;
+    height: auto;
+    right: 0;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 600px) {
+  .ffhat-img {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .about-p,
+  .about-p-2 {
+    font-size: 0.9rem;
+  }
+
+  .italy-img,
+  .factory-hat,
+  .monfils-img {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+  }
+}
+
+/* media queries for the play page */
+@media screen and (max-width: 1024px) {
+  .hat-whack-table td {
+    height: 6rem;
+    width: 9rem;
+  }
+
+  .start-buttons {
+    margin: 0 2rem 2rem 2rem;
+    align-items: center;
+  }
+
+  .whack-div {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+
+  .score,
+  .start {
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 18rem;
+    text-align: center;
+  }
+}
+
+/* Phones (up to 600px) */
+@media screen and (max-width: 600px) {
+  .hat-whack-table td {
+    height: 4rem;
+    width: 6rem;
+  }
+
+  .score,
+  .start {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 16rem;
+    padding: 0.5rem;
+  }
+
+  .start-buttons {
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  .whack-div {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hat-whack-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
 }
