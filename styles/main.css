@@ -165,8 +165,8 @@ footer {
 
 .toggle-ff {
   object-fit: contain;
-  height: auto;
-  width: auto;
+  height: 22rem;
+  width: 22rem;
 }
 
 .toggle-ff:hover {
