@@ -82,6 +82,98 @@ nav {
   background-color: whitesmoke;
   transition: width 0.3s ease;
 }
+
+/* footer content and toggle */
+
+footer {
+  background-color: #1d1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 7rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-table {
+  color: whitesmoke;
+  font-family: 'Chivo Mono', monospace;
+}
+
+.footer-divider-1 {
+  background-color: whitesmoke;
+  color: grey;
+  height: 25rem;
+  width: 0.3rem;
+  justify-self: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.centered-footer-grid-item {
+  flex-direction: column;
+}
+
+.footer-link {
+  position: relative;
+  display: inline-block;
+  color: whitesmoke;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: whitesmoke;
+  transition: width 0.3s ease;
+}
+
+.footer-social {
+  height: 4rem;
+  width: 4rem;
+  object-fit: contain;
+}
+
+.footer-social:hover {
+  cursor: pointer;
+}
+
+.table-divide {
+  height: 2rem;
+}
+
+.table-divide2 {
+  height: 0.65rem;
+}
+
+.toggle-ff-footer {
+}
+
+.toggle-ff {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+}
+
+.toggle-ff:hover {
+  cursor: pointer;
+}
 /* main content on the home page */
 
 .image-stack {
