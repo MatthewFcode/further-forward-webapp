@@ -86,7 +86,8 @@ nav {
 /* footer content and toggle */
 
 .footer-init {
-  background-color: #1d1a1a;
+  background-color: #121212;
+  border-top: 0.3rem solid rgba(13, 13, 13);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,10 +196,19 @@ nav {
   height: 4rem;
   width: 4rem;
   object-fit: contain;
+  opacity: 0.96;
+  transition: transform 0.1s ease;
 }
 
 .footer-social:hover {
+  transform: scale(0.99);
   cursor: pointer;
+  opacity: 1;
+}
+
+.footer-social:active {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 .table-divide {
@@ -213,6 +223,7 @@ nav {
   object-fit: contain;
   height: 22rem;
   width: 22rem;
+  opacity: 0.96;
 }
 
 .toggle-ff.toggle {
@@ -223,6 +234,13 @@ nav {
 
 .toggle-ff:hover {
   cursor: pointer;
+  opacity: 1;
+  transform: scale(0.99);
+}
+
+.toggle-ff:active {
+  cursor: pointer;
+  transform: scale(1.04);
 }
 /* main content on the home page */
 
