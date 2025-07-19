@@ -211,8 +211,8 @@ nav {
   height: 4rem;
   width: 4rem;
   object-fit: contain;
-  opacity: 0.96;
   transition: transform 0.1s ease;
+  opacity: 0.99;
 }
 
 .footer-social:hover {
@@ -238,7 +238,7 @@ nav {
   object-fit: contain;
   height: 22rem;
   width: 22rem;
-  opacity: 0.96;
+  opacity: 0.99;
 }
 
 .toggle-ff.toggle {
