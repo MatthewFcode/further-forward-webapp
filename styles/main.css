@@ -85,14 +85,22 @@ nav {
 
 /* footer content and toggle */
 
-footer {
+.footer-init {
   background-color: #1d1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -17rem;
+  margin-bottom: 0;
 }
-
+.footer-init.toggle {
+  background-color: rgb(169, 166, 166);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -17rem;
+  margin-bottom: 0;
+}
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -107,8 +115,23 @@ footer {
   font-family: 'Chivo Mono', monospace;
 }
 
+.footer-table.toggle {
+  color: black;
+  font-family: 'Chivo Mono', monospace;
+}
+
 .footer-divider-1 {
   background-color: whitesmoke;
+  color: grey;
+  height: 25rem;
+  width: 0.3rem;
+  justify-self: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.footer-divider-1.toggle {
+  background-color: black;
   color: grey;
   height: 25rem;
   width: 0.3rem;
@@ -130,6 +153,15 @@ footer {
   transition: color 0.3s ease;
 }
 
+.footer-link.toggle {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
 .footer-link:hover::after {
   width: 100%;
 }
@@ -142,6 +174,20 @@ footer {
   width: 0%;
   height: 2px;
   background-color: whitesmoke;
+  transition: width 0.3s ease;
+}
+.footer-link.toggle:hover::after {
+  width: 100%;
+}
+
+.footer-link.toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: black;
   transition: width 0.3s ease;
 }
 
@@ -164,6 +210,12 @@ footer {
 }
 
 .toggle-ff {
+  object-fit: contain;
+  height: 22rem;
+  width: 22rem;
+}
+
+.toggle-ff.toggle {
   object-fit: contain;
   height: 22rem;
   width: 22rem;
@@ -670,5 +722,91 @@ footer {
     width: 100%;
     overflow-x: auto;
     display: block;
+  }
+}
+
+/* responsivity for the footer */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-divider-1 {
+    height: 0.2rem;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: whitesmoke;
+  }
+
+  .toggle-ff {
+    height: 14rem;
+    width: 14rem;
+  }
+
+  .footer-social {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .footer-link,
+  .footer-link.toggle {
+    font-size: 1.1rem;
+  }
+
+  .footer-table {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-grid {
+    padding: 1.5rem;
+    row-gap: 2.5rem;
+  }
+
+  .toggle-ff {
+    height: 11rem;
+    width: 11rem;
+  }
+
+  .footer-social {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .footer-link,
+  .footer-link.toggle {
+    font-size: 1rem;
+  }
+
+  .footer-table {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-grid {
+    padding: 1rem;
+    row-gap: 2rem;
+  }
+
+  .toggle-ff {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .footer-social {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .footer-link,
+  .footer-link.toggle {
+    font-size: 0.95rem;
+  }
+
+  .footer-table {
+    font-size: 0.95rem;
   }
 }
