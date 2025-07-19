@@ -42,7 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //WHACKING THE HAT
 
-let cellArr = Array.from(document.getElementsByTagName('td'))
+let cellArr = Array.from(document.querySelectorAll('.hat-whack-table td'))
+
 console.log(cellArr)
 
 let hatVisible = false
