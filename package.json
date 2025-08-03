@@ -1,0 +1,21 @@
+{
+  "name": "further-forward-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MatthewFcode/further-forward-webapp#readme",
+  "bugs": {
+    "url": "https://github.com/MatthewFcode/further-forward-webapp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewFcode/further-forward-webapp.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "render:build": "npm install && npm run build && npm prune --omit=dev",
+  }
+}
